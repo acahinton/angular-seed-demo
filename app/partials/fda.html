@@ -1,0 +1,10 @@
+﻿<div>
+   
+    <input type="button" data-ng-click="FilterFDAs('')" value="All" />
+    <input type="button" data-ng-click="FilterFDAs('Orders')" value="Orders"  />
+    <input type="button" data-ng-click="FilterFDAs('Delivery')" value="Delivery"  />
+    
+    <ul>
+        <li data-ng-mouseenter="showDate = true;" data-ng-mouseleave="showDate = false;" data-ng-repeat="event in FDAs | filter:xx">{{ event.ManagerOrganisationName }}({{event.ManagerOrganisationId}}), {{ event.AircraftCount }}, {{ event.EngineType }}, {{event.Type}} <span class="deliveryDate" data-ng-show="showDate">{{ event.DeliveryDate }}</span></li>
+    </ul>
+</div>
