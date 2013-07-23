@@ -51,6 +51,11 @@ li {
     left: 900px;
     position: absolute;
     padding: 0px 5px;
+    display: none;
+}
+
+.visibleAtLast {
+    display: inline;
 }
 
 li.Order {

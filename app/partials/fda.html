@@ -1,10 +1,11 @@
 ﻿<div>
    
-    <input type="button" data-ng-click="FilterFDAs('')" value="All" />
-    <input type="button" data-ng-click="FilterFDAs('Order')" value="Orders"  />
-    <input type="button" data-ng-click="FilterFDAs('Delivery')" value="Delivery"  />
+    <input type="button" data-ng-click="filterEvents('')" value="All" />
+    <input type="button" data-ng-click="filterEvents('Order')" value="Orders"  />
+    <input type="button" data-ng-click="filterEvents('Delivery')" value="Delivery"  />
     
+    <input type="text" data-ng-model="showDate"  />
     <ul>
-        <li class="{{ event.Type }}" data-ng-mouseenter="showDate = true;" data-ng-mouseleave="showDate = false;" data-ng-repeat="event in FDAs | filter:searchTerms">{{ event.ManagerOrganisationName }}({{event.ManagerOrganisationId}}), {{ event.AircraftCount }}, {{ event.EngineType }}, {{event.Type}} <span class="deliveryDate" data-ng-show="showDate">{{ event.DeliveryDate }}</span></li>
+        <li data-ng-repeat="event in FDAs | filter:searchTerms" class="{{ event.Type }}" showhideonhover="deliveryDate">{{showDate}} {{ event.ManagerOrganisationName }}({{event.ManagerOrganisationId}}), {{ event.AircraftCount }}, {{ event.EngineType }}, {{event.Type}} <span class="deliveryDate">{{ event.DeliveryDate }}</span></li>
     </ul>
 </div>
