@@ -45,12 +45,12 @@ li {
 
 .deliveryDate {
     border: 1px solid #BBB;
-    box-shadow: 10px 5px 5px #888888;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
     background-color: #DDD;
-    padding: 2px;
     left: 900px;
     position: absolute;
-    padding: 0px 5px;
+    padding: 0 5px;
     display: none;
 }
 
