@@ -7,27 +7,6 @@ var myApp = angular.module('myApp.controllers', []).
         $scope.message = "From a controller";
     }]);
 
-myApp.directive('fleetalertdate', function () {
-    return {
-        restrict: "E",
-        replace: true,
-        scope: {
-            eventdate: '@'
-        },
-        template: "<span class=\"deliveryDate\">{{eventdate}}</span>",
-        link: function(scope, element) {
-
-            element.parent().bind("mouseenter", function () {
-                element.addClass('visibleAtLast');
-            });
-
-            element.parent().bind("mouseleave", function () {
-                element.removeClass('visibleAtLast');
-            });
-        }
-    };
-});
-
 myApp.controller('FDAController', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
 
     $scope.filterEvents = function(filterText) {
